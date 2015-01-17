@@ -1,7 +1,11 @@
 
 # nwjs-template
 
-## Init
+A template application structure for building new projects using node-webkit and cloak.
+
+## Getting Started
+
+First, get the code
 
 ```bash
 $ git clone git@github.com:UmbraEngineering/nwjs-template your-project
@@ -12,18 +16,18 @@ $ rm -rf .git
 
 # ... so you can start your own
 $ git init
+```
 
-# Install dependencies
+And install the dependencies...
+
+```bash
 $ npm install
 ```
 
-## Running
+You can then build for the architectures you need using gulp (if you don't give one, it will determine your current architecture and build for that).
 
 ```bash
-$ nw .
+$ gulp build [--win] [--osx] [--linux32] [--linux64] [--all]
 ```
 
-## Building
-
-
-
+Your newly built project will be in `build/nwjs-template` (or `build/your-project` etc.)
