@@ -15,10 +15,7 @@ var MainRouter = module.exports = Router.extend({
 
 	welcome: function() {
 		document.title = 'node-webkit project';
-		this.drawPage(WelcomeController)
-			.catch(function(err) {
-				console.log(err.stack);
-			});
+		this.drawPage(WelcomeController);
 	},
 
 // -------------------------------------------------------------
@@ -35,7 +32,7 @@ var MainRouter = module.exports = Router.extend({
 		if (this.current) {
 			return this.current.undraw().then(render);
 		} else {
-			return wait(500).then(render);
+			return wait(100).then(render);
 		}
 
 		function render() {
