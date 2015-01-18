@@ -5,7 +5,7 @@ var declare     = require('gulp-declare');
 var concat      = require('gulp-concat');
 
 gulp.task('handlebars', function() {
-	gulp.src('src/views/**/*.hbs')
+	gulp.src('app/src/views/**/*.hbs')
 		.pipe(handlebars())
 		.pipe(declare({
 			namespace: 'views',
@@ -16,5 +16,5 @@ gulp.task('handlebars', function() {
 			}
 		}))
 		.pipe(concat('templates.js'))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('app/src'));
 });
